@@ -4,7 +4,9 @@ def bubble_sort(new_array)
     flag = 1
     new_array.each_with_index do |numb, position|
       next if position == new_array.length - 1
+
       next unless numb > new_array[position + 1]
+      
       new_array[position] = new_array[position + 1]
       new_array[position + 1] = numb
       flag = 0
@@ -19,8 +21,10 @@ def bubble_sort_by(new_array)
     flag = 1
     new_array.each_with_index do |numb, position|
       next if position == new_array.length - 1
+
       test = yield(numb, new_array[position + 1])
       next unless test.positive?
+
       new_array[position] = new_array[position + 1]
       new_array[position + 1] = numb
       flag = 0
