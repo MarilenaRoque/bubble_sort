@@ -6,7 +6,6 @@ def bubble_sort(new_array)
       next if position == new_array.length - 1
 
       next unless numb > new_array[position + 1]
-      
       new_array[position] = new_array[position + 1]
       new_array[position + 1] = numb
       flag = 0
